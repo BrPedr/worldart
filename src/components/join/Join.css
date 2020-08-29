@@ -1,0 +1,123 @@
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: blue;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.nav-menu {
+  max-width: 100%;
+  height: 120px;
+  margin-left: 10%;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-menu > li {
+  margin-left: 2em;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.nav-menu a:hover {
+  color: rgb(226, 95, 43);
+  text-decoration: overline;
+}
+
+/* form */
+h2 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+.a-form {
+  color: blue;
+  font-size: 0.9em;
+}
+
+.box {
+  min-width: 15vw;
+  min-height: 4.5vh;
+  background-color: rgb(240, 240, 240);
+  color: grey;
+  border: none;
+}
+
+.box:hover{
+  background-color: rgb(230, 230, 230);
+  color: rgb(97, 97, 97);
+}
+
+.box[value] {
+  padding-left: 10px;
+}
+
+.name,
+.adress,
+.category {
+  min-width: 30vw;
+}
+
+.bio {
+  min-width: 40vw;
+  min-height: 15vh;
+}
+
+.bio[value] {
+  padding-bottom: 80px;
+}
+
+button {
+  background-color: white;
+  width: 230px;
+  height: 50px;
+  margin-top: 40px;
+  font-weight: 700;
+  border-radius: 0 50px 50px 0;
+  border: solid 2px;
+  margin-bottom: 20px;
+}
+
+#form-join {
+  margin-top: 3%;
+  display: flex;
+  margin-left: 40%;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#form-join > .join-register {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.join {
+  margin-left: 20px;
+}
+
+.form {
+  margin-top: 40px;
+}
