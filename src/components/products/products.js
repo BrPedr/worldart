@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./products.css";
 
@@ -7,7 +8,7 @@ class Products extends React.Component {
     super(props);
     // this.state = { spans: 0 };
     this.imageRef = React.createRef("");
-    this.state = { imageClickedData: [] };
+    this.state = { imageClickedData: {} };
   }
 
   componentDidMount() {
@@ -15,10 +16,10 @@ class Products extends React.Component {
     //   "load",
     //   () => (this.onClickHandler = () => console.log(this.imageRef.current))
     // );
-   this.imageRef.current.addEventListener(
-        "load",
-        () => (this.onClickHandler = () => console.log(this.imageRef.current.currentSrc)
-        ));
+    this.imageRef.current.addEventListener(
+      "load",
+      () => (this.onClickHandler = () => this.imageRef.current.currentSrc)
+    );
 
     // const height = this.imageRef.current.clientHeight;
     // const width = this.imageRef.current.clientWidth;
@@ -35,16 +36,23 @@ class Products extends React.Component {
         gridRows: `span ${this.state.spans}`,
        }}
       >  */
+      <Link
+        to={{
+          pathname: `/cart/${this.props.id}`,
+          state: this.state,
+        }}
+      >
         <img
-          onClick={() => this.onClickHandler()}
+          onClick={() =>
+            this.setState({ imageClickedData: this.onClickHandler() })
+          }
           ref={this.imageRef}
           src={this.props.src}
           alt={this.props.alt}
           key={this.props.id}
           className="product-wraper"
         ></img>
-        /* </div> */
-    //  </Link>
+      </Link>
     );
   }
 }

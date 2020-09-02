@@ -8,7 +8,7 @@ const NavMobile = () => {
       <nav className="nav-mobile">
         <ul className="nav-mobile-container">
           <li>
-            <Link to="/shop">products</Link>
+            <Link to="/">products</Link>
           </li>
           <li>
             <Link to="/artists">artists</Link>

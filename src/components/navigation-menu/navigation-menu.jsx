@@ -23,9 +23,9 @@ const NavigationMenu = () => {
           <li>
             <Link to="/contact">contact</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/shop">shop</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <nav className="nav-profile">

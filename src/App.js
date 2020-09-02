@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 
 import Homepage from "./pages/homepage/Homepage";
 import JoinPage from "./pages/join-page/JoinPage";
@@ -9,16 +9,15 @@ import SignInPage from "./pages/signin-page/SigninPage";
 import ShopPage from "./pages/shop-page/ShopPage";
 import CartPage from "./pages/cart-page/CartPage";
 
-import Banner from './components/banner/banner'
-import Header from './components/header/header'
-import NavMobile from './components/nav-mobile/NavMobile'
-
+import Banner from "./components/banner/banner";
+import Header from "./components/header/header";
+import NavMobile from "./components/nav-mobile/NavMobile";
 
 const App = () => {
   return (
     <div className="Container">
+      <Banner imageUrl="https://i.pinimg.com/564x/91/a6/23/91a6233ced3799f85ed93326af0f238e.jpg" />
       <BrowserRouter>
-        <Banner imageUrl="https://i.pinimg.com/564x/91/a6/23/91a6233ced3799f85ed93326af0f238e.jpg" />
         <Header />
         <NavMobile />
         <Route path="/" exact component={Homepage} />
