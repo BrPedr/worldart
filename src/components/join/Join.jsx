@@ -1,6 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-import Link from "../link/Link";
 import Form from "../form/Form";
 import Input from "../input/Input";
 import Button from "../button/Button";
@@ -13,7 +13,7 @@ const Join = () => {
       <div className="join-register">
         <h3>Have an account?</h3>
         <Link
-          href="/sign-in"
+          to="/sign-in"
           className="join a-form"
           style={{ textDecoration: "none" }}
         >
@@ -21,15 +21,14 @@ const Join = () => {
         </Link>
       </div>
       <Form text="Registration">
-        <Input id="name" className="box name" value="Complete Name" />
-        <Input id="adress" className="box adress" value="Adress" />
-        <Input id="login" className="box" value="Login" />
-        <Input id="email" className="box" value="E-mail" />
-        <Input id="password" className="box" value="Password" />
-        <Input id="phone" className="box" value="Phone Number" />
-        <Input id="category" className="box category" value="Category" />
-        <Input id="bio" className="box bio" value="Bio" />
-      </Form>
+        <Input id="name" className="box name" />
+        <Input id="adress" className="box adress" />
+        <Input id="login" className="box" />
+        <Input id="email" className="box" />
+        <Input id="password" className="box" />
+        <Input id="phone" className="box" />
+        <Input id="category" className="box category" />
+        <Input id="bio" className="box bio" />
       <h6>
         By creating a WORLDART account you agree to our <br />
         <Link className="a-form" href="/about">
@@ -42,6 +41,7 @@ const Join = () => {
         .
       </h6>
       <Button buttonText="Register"></Button>
+      </Form>
     </div>
   );
 };

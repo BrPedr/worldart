@@ -1,45 +1,33 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
 
-import Header from "./components/header/header.jsx";
-import Banner from "./components/banner/banner.jsx";
-import Artists from "./components/artists/artists.jsx";
-import ListOfProducts from "./components/list-of-products/ListOfProducts";
-import Join from "./components/join/Join";
-import About from "./components/about/About";
-import SignIn from "./components/sign-in/SignIn";
-import Route from "./components/route/Route";
-import Shop from "./components/shop/Shop";
-import NavMobile from "./components/nav-mobile/NavMobile";
+import Homepage from "./pages/homepage/Homepage";
+import JoinPage from "./pages/join-page/JoinPage";
+import AboutPage from "./pages/about-page/AboutPage";
+import SignInPage from "./pages/signin-page/SigninPage";
+import ShopPage from "./pages/shop-page/ShopPage";
+import CartPage from "./pages/cart-page/CartPage";
+
+import Banner from './components/banner/banner'
+import Header from './components/header/header'
+import NavMobile from './components/nav-mobile/NavMobile'
+
 
 const App = () => {
   return (
     <div className="Container">
-      <Banner imageUrl="https://i.pinimg.com/564x/91/a6/23/91a6233ced3799f85ed93326af0f238e.jpg" />
-      <Header />
-      <Route path="/">
+      <BrowserRouter>
+        <Banner imageUrl="https://i.pinimg.com/564x/91/a6/23/91a6233ced3799f85ed93326af0f238e.jpg" />
+        <Header />
         <NavMobile />
-      </Route>
-      <Route path="/">
-        <div className="row-of-artists">
-          <Artists />
-        </div>
-        <div className="main-container">
-          <ListOfProducts />
-        </div>
-      </Route>
-      <Route path="/join">
-        <Join />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/sign-in">
-        <SignIn />
-      </Route>
-      <Route path="/shop">
-        <Shop />
-      </Route>
+        <Route path="/" exact component={Homepage} />
+        <Route path="/join" component={JoinPage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/sign-in" component={SignInPage} />
+        <Route path="/shop" component={ShopPage} />
+        <Route path="/cart" component={CartPage} />
+      </BrowserRouter>
     </div>
   );
 };

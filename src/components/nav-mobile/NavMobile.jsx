@@ -1,18 +1,17 @@
 import React from 'react';
-
-import Link from "../link/Link"
+import {Link} from "react-router-dom"
 
 import './NavMobile.css'
 
 const NavMobile = () => {
     return (
-      <nav class="nav-mobile">
-        <ul class="nav-mobile-container">
+      <nav className="nav-mobile">
+        <ul className="nav-mobile-container">
           <li>
-            <Link href="/shop">products</Link>
+            <Link to="/shop">products</Link>
           </li>
           <li>
-            <Link href="/artists">artists</Link>
+            <Link to="/artists">artists</Link>
           </li>
         </ul>
       </nav>

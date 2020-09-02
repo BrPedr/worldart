@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
 
-const Input = ({ id, className, value }) => {
+const Input = ({ id, className }) => {
+  const [term, setTerm] = useState("");
+
   return (
     <React.Fragment>
       <label for={id}>
@@ -9,8 +12,9 @@ const Input = ({ id, className, value }) => {
           type="text"
           id={id}
           name={id}
-          value={value}
+          value={term}
           placeholder={id}
+          onChange={(event) => setTerm(event.target.value)}
           required
         />
       </label>

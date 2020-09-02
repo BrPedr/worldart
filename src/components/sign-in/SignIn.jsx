@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import Link from "../link/Link";
 import Form from "../form/Form";
 import Input from "../input/Input";
 import Button from "../button/Button";
@@ -12,7 +12,7 @@ const SignIn = () => {
     <div id="form-sign-in">
       <div className="signin-register">
         <h3>Do not have an account?</h3>
-        <Link href="/join" className="join a-form">
+        <Link to="/join" className="join a-form">
           Register now
         </Link>
       </div>
@@ -20,13 +20,13 @@ const SignIn = () => {
       <Form text="Login">
         <Input id="email" className="box" value="E-mail" />
         <Input id="password" className="box" value="Password" />
-        <a
-          href="#"
+        <Link
+          to="#"
           className="forgot-password a-form"
           onClick={() => alert("This functionality wasn't implemented yet.")}
         >
           Forgot your password?
-        </a>
+        </Link>
         <br />
         <Button buttonText="Log in"></Button>
       </Form>

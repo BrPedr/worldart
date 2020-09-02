@@ -1,6 +1,6 @@
 import React from "react";
 
-import Link from "../link/Link"
+import {Link} from "react-router-dom";
 
 import "./navigation-menu.css";
 
@@ -10,28 +10,30 @@ const NavigationMenu = () => {
       <nav className="nav-menu">
         <ul className="nav-menu">
           <li>
-            <Link className="navJoin" href="/join">
+            <Link className="navJoin" to="/join">
               join
             </Link>
           </li>
           <li>
-            <Link href="/about">about</Link>
+            <Link to="/about">about</Link>
           </li>
           <li>
-            <Link href="/artists">artists</Link>
+            <Link to="/artists">artists</Link>
           </li>
           <li>
-            <Link href="/contact">contact</Link>
+            <Link to="/contact">contact</Link>
           </li>
           <li>
-            <Link href="/shop">shop</Link>
+            <Link to="/shop">shop</Link>
           </li>
         </ul>
       </nav>
       <nav className="nav-profile">
         <i className="search icon large"></i>
-        <i className="shopping cart icon large link"></i>
-        <Link href="/sign-in">
+        <Link to="/cart">
+              <i className="shopping cart icon large link"></i>
+        </Link>
+        <Link to="/sign-in">
           <i className="user icon large link "></i>
         </Link>
       </nav>
